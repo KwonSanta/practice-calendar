@@ -16,7 +16,6 @@ export function Home() {
         }} mt={10}>
           <Outlet />
         </Box>
-        <Footer />
       </Box>
     </Flex>
   );
