@@ -1,11 +1,10 @@
-import { useNavigate } from "react-router-dom";
-import { Box, Center, Flex, Hide, Show, Spacer } from "@chakra-ui/react";
-import React, { useContext } from "react";
-import { faUser } from "@fortawesome/free-regular-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {useNavigate} from "react-router-dom";
+import {Box, Center, Flex, Hide, Show, Spacer} from "@chakra-ui/react";
+import {faUser} from "@fortawesome/free-regular-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {
+  faCalendarDays,
   faHouse,
-  faPencil,
   faRightFromBracket,
   faRightToBracket,
   faUserPlus,
@@ -50,10 +49,9 @@ export function Navbar() {
           fontSize={20}
           fontWeight={600}
         >
-          <Show below={"lg"}>
-            <FontAwesomeIcon icon={faPencil} />
-          </Show>
-          <Hide below={"lg"}>예약하기</Hide>
+          <Box below={"lg"}>
+            <FontAwesomeIcon icon={faCalendarDays} />
+          </Box>
         </Center>
       <Spacer />
         <Center
