@@ -20,7 +20,6 @@ export function Reserve() {
           onChange={(date) => setStartDate(date)}
           dateFormat="Pp"
           timeintervals={30} // 30분 단위로 선택 가능한 box가 나오게 설정
-          dateFormat="MMMM d, yyyy hh:mm aa" // June 6, 2024 10:45 PM
           toggleCalendarOnIconClick
           isClearable
           showTimeSelect
@@ -34,7 +33,6 @@ export function Reserve() {
           onChange={(date) => setEndDate(date)}
           dateFormat="Pp"
           timeintervals={30} // 30분 단위로 선택 가능한 box가 나오게 설정
-          dateFormat="MMMM d, yyyy hh:mm aa" // June 6, 2024 10:45 PM
           toggleCalendarOnIconClick
           isClearable
           showTimeSelect
