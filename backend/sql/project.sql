@@ -83,7 +83,7 @@ CREATE TABLE room_options
     UNIQUE KEY (room_id, option_id)
 );
 /*
-INSERT INTO options (name, description) VALUES
+INSERT INTO option_list (name, description) VALUES
 ('TV/프로젝터', 'TV 또는 프로젝터 제공'),
 ('인터넷/WIFI', '고속 인터넷 및 WiFi 제공'),
 ('복사/인쇄기', '복사 및 인쇄기 제공');
