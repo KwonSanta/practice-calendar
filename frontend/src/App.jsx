@@ -1,7 +1,8 @@
-import {ChakraProvider} from "@chakra-ui/react";
-import {createBrowserRouter, RouterProvider} from "react-router-dom";
-import {Home} from "./page/Home.jsx";
-import {Reserve} from "./page/Reserve.jsx";
+import { ChakraProvider } from "@chakra-ui/react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Home } from "./page/Home.jsx";
+import { Reserve } from "./page/Reserve.jsx";
+import { SpaceRegister } from "./page/host/SpaceRegister.jsx";
 
 function App() {
   const router = createBrowserRouter([
@@ -10,13 +11,13 @@ function App() {
       element: <Home />,
       children: [
         {
-          path: "/reserve",
-          element: <Reserve/>
+          path: "reserve",
+          element: <Reserve />,
         },
+        { path: "space/register", element: <SpaceRegister /> },
         {},
-        {}
-      ]
-    }
+      ],
+    },
   ]);
 
   return (
@@ -25,7 +26,7 @@ function App() {
         <RouterProvider router={router} />
       </ChakraProvider>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
