@@ -3,7 +3,7 @@ import { Box, TextField } from "@mui/material";
 
 const RegisterPage1 = ({ formData, setFormData }) => {
   const handleChange = (event) => {
-    setFormData({ ...formData, page1Data: event.target.value });
+    setFormData({ ...formData, nickname: event.target.value });
   };
 
   return (
@@ -11,7 +11,7 @@ const RegisterPage1 = ({ formData, setFormData }) => {
       <TextField
         label="사용자 이름"
         variant="outlined"
-        value={formData.page1Data}
+        value={formData.nickname}
         onChange={handleChange}
         fullWidth
       />
