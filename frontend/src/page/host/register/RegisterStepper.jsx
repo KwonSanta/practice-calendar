@@ -44,8 +44,20 @@ const RegisterStepper = () => {
     console.log("Finish button clicked, handle final registration here.");
     console.log("Form Data:", formData);
 
+    // formData 객체를 구조화하여 새로운 객체 생성
+    const structuredFormData = {
+      spaceInfo: {
+        spaceTitle: formData.nickname, // spaceTitle 에 nickname 데이터 할당
+        // 다른 spaceInfo 필드 추가
+      },
+      spaceOptions: {
+        // spaceOptions 필드 추가
+      },
+      // 다른 필드 추가
+    };
+계좌
     axios
-      .post("/api/space/register", formData)
+      .post("/api/space/register", structuredFormData)
       .then((response) => {
         console.log("Data submitted successfully:", response.data);
       })
