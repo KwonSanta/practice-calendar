@@ -2,7 +2,12 @@ import { ChakraProvider } from "@chakra-ui/react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Home } from "./page/Home.jsx";
 import { Reserve } from "./page/Reserve.jsx";
-import { SpaceRegister } from "./page/host/SpaceRegister.jsx";
+import RegisterStepper from "./page/host/register/RegisterStepper.jsx";
+import { createTheme } from "@mui/material/styles";
+import { ThemeProvider } from "@mui/material";
+
+// MUI 테마 설정
+const theme = createTheme();
 
 function App() {
   const router = createBrowserRouter([
@@ -14,16 +19,18 @@ function App() {
           path: "reserve",
           element: <Reserve />,
         },
-        { path: "space/register", element: <SpaceRegister /> },
         {},
       ],
     },
+    { path: "space/register", element: <RegisterStepper /> },
   ]);
 
   return (
     <>
       <ChakraProvider>
-        <RouterProvider router={router} />
+        <ThemeProvider theme={theme}>
+          <RouterProvider router={router} />
+        </ThemeProvider>
       </ChakraProvider>
     </>
   );
